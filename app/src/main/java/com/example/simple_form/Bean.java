@@ -10,6 +10,7 @@ public class Bean {
     public static String ADDRESS = "ADDRESS";
     public static String TELEPHONE = "TELEPHONE";
     public static String CELLPHONE = "CELLPHONE";
+    public static String TABLE_FORM = "FORM";
 
     private int id;
     private String name;

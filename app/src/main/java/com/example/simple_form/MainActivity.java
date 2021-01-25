@@ -37,7 +37,15 @@ public class MainActivity extends AppCompatActivity {
                 if (name.isEmpty() || last_name.isEmpty() || choose_state.isEmpty() || city.isEmpty() || address.isEmpty() || telephone.isEmpty() || cellphone.isEmpty()) {
                     Toast.makeText(MainActivity.this, "Error", Toast.LENGTH_SHORT).show();
                 } else {
-                    changePage();
+                    try {
+                        Dao dao = new Dao(MainActivity.this);
+                        Bean bean = new Bean();
+                        dao.insertSomething(bean);
+                        Toast.makeText(MainActivity.this, "Is working", Toast.LENGTH_SHORT).show();
+                        changePage();
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
                 }
             }
         });
